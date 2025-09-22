@@ -1,0 +1,13 @@
+# Haxby's OpenNeuro dataset
+# - Installed with download.sh
+ds000105
+
+# Output from nb1.ipynb
+tmaps/
+
+# Python environment
+.venv/
+__pycache__/
+
+# Formatter / Linter
+.ruff_cache/
