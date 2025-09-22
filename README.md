@@ -66,7 +66,7 @@ By the end of this tutorial, students will understand:
 
 #### Binder
 
-[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/lobennett/bids_neuroimaging_workshop/main?filepath=tutorial.ipynb)
+[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/lobennett/bids_neuroimaging_workshop/main?urlpath=%2Fdoc%2Ftree%2Ftutorial.ipynb)
 
 Click the Binder badge to run this tutorial in your browser with no installation required. Binder will automatically install all dependencies from `requirements.txt`.
 
@@ -81,7 +81,7 @@ To run in Google Colab:
 
 ```python
 # Install dependencies
-!pip install -r https://raw.githubusercontent.com/lobennett/bids_neuroimaging_workshop/main/requirements.txt
+!pip3 install -r https://raw.githubusercontent.com/lobennett/bids_neuroimaging_workshop/main/requirements.txt
 # Download dataset
 !wget https://raw.githubusercontent.com/lobennett/bids_neuroimaging_workshop/main/download.sh
 !bash download.sh
@@ -94,8 +94,6 @@ bids_neuroimaging_workshop/
 ├── tutorial.ipynb         # Main tutorial notebook
 ├── download.sh            # Script to download Haxby dataset
 ├── requirements.txt       # Python dependencies
-├── utils/
-    ├── spm_hrf.py        # SPM hemodynamic response function
 ├── images/
     ├── hrf.png           # Hemodynamic response example
     ├── fmriprep.jpg      # fMRIPrep workflow diagram

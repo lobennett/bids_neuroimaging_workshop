@@ -1,3 +1,6 @@
+# CLI to fetch data from OpenNeuro
+awscli
+
 # Core neuroimaging packages
 nibabel
 nilearn
