@@ -4,12 +4,12 @@
 # for customizable subjects and runs from the OpenNeuro Haxby dataset (ds000105).
 #
 # Usage: ./download.sh [OPTIONS]
-#   -s, --subjects SUBJECTS    Comma-separated list of subject numbers (default: 1)
-#   -r, --runs RUNS           Comma-separated list of run numbers (default: 1)
+#   -s, --subjects SUBJECTS    Comma-separated list of subject numbers (default: 1,2,3)
+#   -r, --runs RUNS           Comma-separated list of run numbers (default: 1,2,3)
 #   -h, --help                Show this help message
 #
 # Examples:
-#   ./download.sh                           # Download subject 1, run 1
+#   ./download.sh                           # Download subjects 1,2,3, runs 1,2,3
 #   ./download.sh -s 1,2 -r 1,2,3          # Download subjects 1-2, runs 1-3
 #   ./download.sh --subjects 1 --runs 1,2   # Download subject 1, runs 1-2
 #
@@ -18,8 +18,8 @@
 set -e
 
 ## ——— Default Configuration ———
-DEFAULT_SUBJECTS="1"
-DEFAULT_RUNS="1"
+DEFAULT_SUBJECTS="1,2,3"
+DEFAULT_RUNS="1,2,3"
 DATASET="ds000105"
 BIDS_DIR="./${DATASET}"
 DERIVS_DIR="${BIDS_DIR}/derivatives/fmriprep"
@@ -36,7 +36,7 @@ show_help() {
     echo "  -h, --help                Show this help message"
     echo ""
     echo "Examples:"
-    echo "  $0                           # Download subject 1, run 1"
+    echo "  $0                           # Download subjects 1,2,3, runs 1,2,3"
     echo "  $0 -s 1,2 -r 1,2,3          # Download subjects 1-2, runs 1-3"
     echo "  $0 --subjects 1 --runs 1,2   # Download subject 1, runs 1-2"
     echo "  $0 -s 1,2,3,4,5,6 -r 1,2,3  # Download all 6 subjects, first 3 runs"
